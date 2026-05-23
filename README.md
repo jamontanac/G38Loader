@@ -1,5 +1,7 @@
 # G38Loader
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 GRCh38-anchored pipeline for downloading, verifying, and parsing ClinVar, gnomAD,
 OMIM, and other major genomic reference databases into structured JSON.
 
