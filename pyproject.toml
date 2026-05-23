@@ -1,0 +1,38 @@
+[project]
+name = "g38loader"
+version = "0.1.0"
+description = "GRCh38-anchored pipeline for downloading, verifying, and parsing ClinVar, gnomAD, OMIM, and other major genomic reference databases into structured JSON."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "jmontana", email = "jmontana@n-ix.com" },
+]
+dependencies = [
+    "pandas>=2.2",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+download-databases = "databases_processing.download:main"
+verify-databases = "databases_processing.verify:main"
+databases-config = "databases_processing.config_cli:main"
+parse-clinvar = "databases_processing.parse_clinvar:main"
+parse-omim = "databases_processing.parse_omim:main"
+parse-equivalences = "databases_processing.parse_equivalences:main"
+parse-gnomad = "databases_processing.parse_gnomad:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/databases_processing"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
