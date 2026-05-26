@@ -17,8 +17,8 @@ import re
 import sys
 from pathlib import Path
 
-from databases_processing.common import db_path, load_config, setup_logging
-from databases_processing.provenance import sha256_file
+from g38loader.common import db_path, load_config, setup_logging
+from g38loader.provenance import sha256_file
 
 log = logging.getLogger("verify")
 

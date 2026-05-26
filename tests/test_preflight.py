@@ -1,4 +1,4 @@
-"""Tests for databases_processing.preflight."""
+"""Tests for g38loader.preflight."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -6,7 +6,7 @@ from typing import Any
 
 import pytest
 
-from databases_processing import preflight as pf
+from g38loader import preflight as pf
 
 GB = 1024 ** 3
 

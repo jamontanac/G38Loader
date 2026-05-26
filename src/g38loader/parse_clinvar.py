@@ -22,7 +22,7 @@ from typing import Any
 
 import pandas as pd
 
-from databases_processing.common import load_config, db_path, setup_logging
+from g38loader.common import load_config, db_path, setup_logging
 
 log = logging.getLogger("parse_clinvar")
 

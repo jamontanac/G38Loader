@@ -19,7 +19,7 @@ import re
 from pathlib import Path
 from typing import Iterable
 
-from databases_processing.common import load_config, db_path, setup_logging
+from g38loader.common import load_config, db_path, setup_logging
 
 log = logging.getLogger("parse_omim")
 

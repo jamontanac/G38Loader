@@ -24,7 +24,7 @@ from typing import Any
 
 import yaml
 
-# src/databases_processing/common.py -> repo root is parents[2]
+# src/g38loader/common.py -> repo root is parents[2]
 DEFAULT_CONFIG = Path(__file__).resolve().parents[2] / "config" / "config.yaml"
 
 # Env var that overrides cfg["base_dir"]. CLI flag (--base-dir) still wins.

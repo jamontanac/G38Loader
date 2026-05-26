@@ -26,14 +26,14 @@ import subprocess
 from pathlib import Path
 from typing import NamedTuple
 
-from databases_processing.common import (
+from g38loader.common import (
     db_path,
     file_exists_nonempty,
     load_config,
     setup_logging,
 )
-from databases_processing.preflight import confirm_or_abort
-from databases_processing.provenance import FileSpec, write_readme
+from g38loader.preflight import confirm_or_abort
+from g38loader.provenance import FileSpec, write_readme
 
 log = logging.getLogger("download")
 

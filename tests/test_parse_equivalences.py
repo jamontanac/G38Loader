@@ -1,4 +1,4 @@
-"""Tests for databases_processing.parse_equivalences."""
+"""Tests for g38loader.parse_equivalences."""
 from __future__ import annotations
 
 import json
@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-from databases_processing.parse_equivalences import (
+from g38loader.parse_equivalences import (
     merge,
     parse_lrg_refseq,
     parse_ncbi_gff,

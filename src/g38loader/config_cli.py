@@ -15,7 +15,7 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from databases_processing.common import load_config
+from g38loader.common import load_config
 
 
 def resolve(cfg: dict[str, Any], key: str) -> Any:

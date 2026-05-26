@@ -1,4 +1,4 @@
-"""Tests for databases_processing.common — primarily base_dir override logic."""
+"""Tests for g38loader.common — primarily base_dir override logic."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -6,7 +6,7 @@ from textwrap import dedent
 
 import pytest
 
-from databases_processing.common import BASE_DIR_ENV, load_config
+from g38loader.common import BASE_DIR_ENV, load_config
 
 
 @pytest.fixture

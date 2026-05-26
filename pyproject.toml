@@ -13,13 +13,13 @@ dependencies = [
 ]
 
 [project.scripts]
-download-databases = "databases_processing.download:main"
-verify-databases = "databases_processing.verify:main"
-databases-config = "databases_processing.config_cli:main"
-parse-clinvar = "databases_processing.parse_clinvar:main"
-parse-omim = "databases_processing.parse_omim:main"
-parse-equivalences = "databases_processing.parse_equivalences:main"
-parse-gnomad = "databases_processing.parse_gnomad:main"
+download-databases = "g38loader.download:main"
+verify-databases = "g38loader.verify:main"
+databases-config = "g38loader.config_cli:main"
+parse-clinvar = "g38loader.parse_clinvar:main"
+parse-omim = "g38loader.parse_omim:main"
+parse-equivalences = "g38loader.parse_equivalences:main"
+parse-gnomad = "g38loader.parse_gnomad:main"
 
 [dependency-groups]
 dev = [
@@ -31,7 +31,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/databases_processing"]
+packages = ["src/g38loader"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

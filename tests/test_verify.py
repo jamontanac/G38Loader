@@ -1,4 +1,4 @@
-"""Tests for databases_processing.verify."""
+"""Tests for g38loader.verify."""
 from __future__ import annotations
 
 import hashlib
@@ -6,8 +6,8 @@ from pathlib import Path
 
 import pytest
 
-from databases_processing.provenance import write_readme
-from databases_processing.verify import (
+from g38loader.provenance import write_readme
+from g38loader.verify import (
     parse_readme_files,
     verify_dir,
 )

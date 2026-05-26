@@ -1,4 +1,4 @@
-"""Tests for databases_processing.parse_omim."""
+"""Tests for g38loader.parse_omim."""
 from __future__ import annotations
 
 import gzip
@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pytest
 
-from databases_processing.parse_omim import iter_vcf_lines, run
+from g38loader.parse_omim import iter_vcf_lines, run
 
 
 # --------------------------------------------------------------------------

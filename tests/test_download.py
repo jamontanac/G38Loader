@@ -1,4 +1,4 @@
-"""Tests for databases_processing.download."""
+"""Tests for g38loader.download."""
 from __future__ import annotations
 
 import gzip
@@ -8,7 +8,7 @@ from typing import Any
 
 import pytest
 
-from databases_processing import download as dl
+from g38loader import download as dl
 
 
 # --------------------------------------------------------------------------

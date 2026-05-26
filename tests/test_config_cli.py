@@ -1,9 +1,9 @@
-"""Tests for databases_processing.config_cli."""
+"""Tests for g38loader.config_cli."""
 from __future__ import annotations
 
 import pytest
 
-from databases_processing.config_cli import resolve
+from g38loader.config_cli import resolve
 
 
 def test_resolve_simple_key():

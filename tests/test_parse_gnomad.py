@@ -1,4 +1,4 @@
-"""Tests for databases_processing.parse_gnomad."""
+"""Tests for g38loader.parse_gnomad."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -6,7 +6,7 @@ from typing import Any
 
 import pytest
 
-from databases_processing import parse_gnomad as pg
+from g38loader import parse_gnomad as pg
 
 
 # --------------------------------------------------------------------------

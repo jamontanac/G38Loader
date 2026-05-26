@@ -1,4 +1,4 @@
-"""Tests for databases_processing.parse_clinvar."""
+"""Tests for g38loader.parse_clinvar."""
 from __future__ import annotations
 
 import json
@@ -7,7 +7,7 @@ from pathlib import Path
 import pandas as pd
 import pytest
 
-from databases_processing.parse_clinvar import OMIM_RE, run, variant_record
+from g38loader.parse_clinvar import OMIM_RE, run, variant_record
 
 
 # --------------------------------------------------------------------------

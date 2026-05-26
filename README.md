@@ -19,7 +19,7 @@ g38loader/
 ├── uv.lock
 ├── Makefile                        # orchestration
 ├── config/config.yaml              # paths, URLs, versions, descriptions
-├── src/databases_processing/
+├── src/g38loader/
 │   ├── common.py                   # config loader + path helpers
 │   ├── config_cli.py               # databases-config (replaces yq)
 │   ├── download.py                 # download-databases
