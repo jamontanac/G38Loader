@@ -30,22 +30,29 @@ log = logging.getLogger("parse_clinvar")
 # Original script required the trailing dot, which dropped some entries.
 OMIM_RE = re.compile(r"OMIM:(\d+)(?:\.\d+)?")
 
-
 def variant_record(row: pd.Series) -> dict[str, Any]:
     """Convert one variant_summary row into the standardized dict."""
     rs_raw = str(row["RS# (dbSNP)"])
     other_ids = str(row.get("OtherIDs", "") or "")
+    # Extraemos el VariationID directamente de la fila
+    variation_id = str(row["VariationID"])
 
-    # ClinVar uses -1 to mean "no dbSNP rs"
+    # Lógica para el RS ID (se mantiene igual)
     if rs_raw in ("-1", "nan", ""):
         rs_id = "NA"
         variante = "NA"
-        enlace_clinvar = "NA"
     else:
         rs_id = f"rs{rs_raw}"
         variante = rs_raw
-        enlace_clinvar = f"https://www.ncbi.nlm.nih.gov/snp/{rs_id}/"
 
+    # NUEVA Lógica para el enlace a ClinVar
+    # Usamos VariationID en lugar del RS ID
+    if variation_id and variation_id != "nan":
+        enlace_clinvar = f"https://www.ncbi.nlm.nih.gov/clinvar/variation/{variation_id}/"
+    else:
+        enlace_clinvar = "NA"
+
+    # Lógica para OMIM (se mantiene igual)
     match = OMIM_RE.search(other_ids)
     if match:
         omim = match.group(1)
@@ -58,7 +65,7 @@ def variant_record(row: pd.Series) -> dict[str, Any]:
         "variante": variante,
         "RS_ID": rs_id,
         "Clinvar": row["ClinicalSignificance"],
-        "Enlace_ClinVar": enlace_clinvar,
+        "Enlace_ClinVar": enlace_clinvar, # Ahora apunta a la variante en ClinVar
         "CHROM": row["Chromosome"],
         "POS": row["Start"],
         "REF": row["ReferenceAlleleVCF"],
